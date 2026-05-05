@@ -1,0 +1,10 @@
+<?php
+// Incluimos el archivo de la API
+require_once('API.Rick.php');
+
+// Llamamos a la función y guardamos los datos en una variable
+$personajes = obtenerPersonajes('alive');
+
+// Cargamos la vista (el HTML)
+include('index.html');
+?>

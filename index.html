@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>DWES - Tarea 9</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header class="portal-header">
+        <h1>Personajes Rick y Morty</h1>
+    </header>
+
+    <main class="personajes-grid">
+        <?php if(!empty($personajes)): ?>
+            <?php foreach($personajes as $p): ?>
+                <article class="card-personaje">
+                    <img src="<?php echo $p['image']; ?>" alt="Personaje <?php echo $p['name']; ?>">
+                    <div class="card-info">
+                        <h2><?php echo $p['name']; ?></h2>
+                        <p><strong>Estado:</strong> <?php echo $p['status']; ?></p>
+                        <p><strong>Especie:</strong> <?php echo $p['species']; ?></p>
+                    </div>
+                </article>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <p>No se han podido cargar los personajes.</p>
+        <?php endif; ?>
+    </main>
+
+</body>
+</html>

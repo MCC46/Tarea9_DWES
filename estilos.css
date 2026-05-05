@@ -1,0 +1,74 @@
+/* Configuración general */
+body {
+    background-color: #24282f;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Cabecera */
+.portal-header {
+    background-color: #3c3e44;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 40px;
+    border: 1px solid #2d333b;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.portal-header h1 {
+    color: #5ce1e6;
+    font-size: 3rem;
+    margin: 0;
+}
+
+/* Contenedor de la Rejilla (Aquí está el truco de las columnas) */
+.personajes-grid {
+    display: grid;
+    /* Crea columnas de al menos 250px que se ajustan solas */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px; /* Espacio entre columnas y filas */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo de cada Tarjeta */
+.card-personaje {
+    background-color: #3c3e44;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #2d333b;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-personaje:hover {
+    transform: translateY(-10px);
+    border-color: #5ce1e6;
+}
+
+.card-personaje img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-info h2 {
+    color: #5ce1e6;
+    margin: 0 0 10px 0;
+    font-size: 1.4rem;
+}
+
+.card-info p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #e0e0e0;
+}
